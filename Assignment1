@@ -1,0 +1,32 @@
+
+2. Create a directory ‘dir1’ in which you have three files. All the file should have some texts related to banking. Now count every occurrence of the term “bank” in all the files appearing under the directory ‘dir1’
+
+sahithi@DESKTOP-OSC477G:~$ ls
+DBS  fibonacci.sh  file.sh  firstfile.sh  for.sh  funtion.sh  greeting.sh  multiply.sh  nested.sh  new_dir  new_dir_1  user.sh  while.sh
+sahithi@DESKTOP-OSC477G:~$ mkdir directory_sahithi
+sahithi@DESKTOP-OSC477G:~$ cd directory_sahithi/
+sahithi@DESKTOP-OSC477G:~/directory_sahithi$ touch file1.txt
+sahithi@DESKTOP-OSC477G:~/directory_sahithi$ touch file2.txt
+sahithi@DESKTOP-OSC477G:~/directory_sahithi$ touch file3.txt
+sahithi@DESKTOP-OSC477G:~/directory_sahithi$ echo 'This is DBS bank' > file1.txt
+sahithi@DESKTOP-OSC477G:~/directory_sahithi$ cat file1.txt
+This is DBS bank
+sahithi@DESKTOP-OSC477G:~/directory_sahithi$ echo 'DBS Bank is recognized as the world's best bank. It's live more, bank less' > file2.txt
+sahithi@DESKTOP-OSC477G:~/directory_sahithi$ echo 'DBS bank provides a digi bank application' > file3.txt
+
+sahithi@DESKTOP-OSC477G:~/directory_sahithi$ cat * | grep bank
+This is DBS bank
+DBS Bank is recognized as the worlds best bank. Its live more, bank less
+DBS bank provides a digi bank application
+
+sahithi@DESKTOP-OSC477G:~/directory_sahithi$ grep -c -R 'bank'
+file1.txt:1
+file2.txt:1
+file3.txt:1
+=======================================================================================================================================
+3.What is the command to continuously monitor the log file for a service in running state?
+tail -f is the command
+
+======================================================================================================================================
+5. What is the command to print the name of the shell in which we work?
+echo $0
