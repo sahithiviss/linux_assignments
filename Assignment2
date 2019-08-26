@@ -1,0 +1,71 @@
+
+ASSIGNMENT 2
+1.Consider an array like the below one (Ubuntu Fedora Suse Linuxmint) and find the index of the element Fedora
+
+#!/bin/bash
+declare -A sahithi
+sahithi=([Ubuntu]=0 [Fedora]=1 [Suse]=2 [Linuxmint]=3)
+echo 'The index of Fedora is '${sahithi['Fedora']}
+
+output: The index of Fedora is 1
+------------------------------------------------------------------------------------------------------------------
+3.Search a character from a string e.g.Input string ‘hello world’ Find the position of the character ‘r’
+#!/bin/bash
+echo "enter the string:"
+read s
+echo "enter the character to find the position:"
+read c
+echo $s | grep -b -o $c
+
+output: 
+sahithi@DESKTOP-OSC477G:~/directory_sahithi$ bash string1.bash
+enter the string:
+sahithi
+enter the character to find the position:
+a
+1:a
+sahithi@DESKTOP-OSC477G:~/directory_sahithi$ bash string1.bash
+enter the string:
+sahithi
+enter the character to find the position:
+h
+2:h
+5:h
+-------------------------------------------------------------------------------------------------------------------
+
+4.Write a shell script for comparing the contents of two files
+sahithi@DESKTOP-OSC477G:~/directory_sahithi$ cat s1.txt
+hello
+sahithi@DESKTOP-OSC477G:~/directory_sahithi$ cat s2.txt
+hello
+Shell script
+#!/bin/bash
+if cmp -s "s1.txt" "s2.txt"
+then
+           echo "The files are same"
+   else
+              echo "The files are different"
+      fi
+-------------------------------------------------------------------------------------------------------------------
+
+5.Write a Shell script for getting word count of a file. If file is not exist in the path, then
+the script has to exit and return the error code.
+
+#!/bin/bash
+echo "enter the file name:"
+read file
+sudo wc -w $file
+echo $?
+-------------------------------------------------------------------------------------------------------------------
+
+6.Write a shell script for finding the cubic value of a given number
+#!/bin/bash
+echo "enter a number:"
+read a
+c=`expr "$a" \* "$a" \* "$a" `
+echo "The cube of $a=" $c
+output:
+sahithi@DESKTOP-OSC477G:~/directory_sahithi$ bash cube.sh
+enter a number:
+5
+The cube of 5= 125
